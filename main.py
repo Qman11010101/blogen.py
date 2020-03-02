@@ -15,9 +15,6 @@ env = Environment(loader=FileSystemLoader("./", encoding="utf-8"))
 top_template = env.get_template("assets/top_template.html")
 article_template = env.get_template("assets/article_template.html")
 
-# with open("config.toml", mode="r", encoding="utf-8_sig") as cftf:
-#     config = toml.load(cftf)
-
 with open("settings.json", encoding="utf-8_sig") as s:
     config = json.load(s)
 
@@ -36,6 +33,7 @@ os.chdir(blog_folder)
 os.makedirs("articles/", exist_ok=True)
 os.makedirs("pictures/", exist_ok=True)
 os.chdir(current_dir)  # 戻ってくる
+os.makedirs("pictures/", exist_ok=True)
 
 print("記事のタイトルを入力してください")
 article_title = input(">> ")

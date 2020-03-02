@@ -1,0 +1,216 @@
+/*先頭に「.」が付いているものは消さないでください*/
+
+html, ul, ol, dl, li, dt, dd, p, div, span, img, a, table, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-weight: normal;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+article, header, footer, aside, figure, figcaption, nav, section { 
+    display: block;
+}
+
+body {
+    line-height: 1.5;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    background-color: #252525;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-weight: normal;
+    font-size: 100%;
+    vertical-align: baseline;
+    color: #121212;
+    overflow-x: hidden;
+}
+
+h1{
+    font-size: 2rem;
+}
+
+.main{
+    font-family: sans-serif;
+    width: 756px;
+    margin: 15px auto;
+}
+@media screen and (max-width: 1920px){
+    .main{
+        font-family: sans-serif;
+        width: 756px;
+        margin: 15px auto;
+    }
+}
+@media screen and (max-width: 1600px){
+    .main{
+        font-family: sans-serif;
+        width: 756px;
+        margin: 15px auto;
+    }
+}
+@media screen and (max-width: 1365px){
+    .main{
+        font-family: sans-serif;
+        width: 756px;
+        margin: 15px auto;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+}
+@media screen and (max-width: 780px){
+    .main{
+        width: 88%;
+        margin: 0px;
+    }
+}
+
+.header{
+    box-sizing: border-box;
+    background-color: #dbdbdb;
+    min-height: 200px;
+    border-radius: 20px;
+    padding: 10px 45px 20px;
+    margin-bottom: 10px;
+}
+@media screen and (max-width: 780px){
+    .header{
+        box-sizing: border-box;
+        min-height: 100px;
+        border-radius: 0px;
+        padding: 10px 15px 20px;
+        margin: 10px 0px;
+    }
+}
+.header h1{
+    font-family: serif;
+}
+
+.article{
+    margin-top: 10px;
+    box-sizing: border-box;
+    background-color: #dbdbdb;
+    border-radius: 20px;
+    padding: 20px 0px;
+}
+@media screen and (max-width: 780px){
+    .article{
+        box-sizing: border-box;
+        margin-top: 10px;
+        padding: 0;
+        border-radius: 0px;
+    }
+}
+
+.atcinside{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+@media screen and (max-width: 780px){
+    .atcinside{
+        padding: 20px;
+    }
+}
+
+.atcinside h1{
+    font-size: 1.7rem;
+    color: #252525;
+}
+
+.atcinside h2{
+    font-size: 1.4rem;
+    color: #252525;
+}
+
+.atcinside img{
+    max-width: 100%;
+}
+
+.list_content{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.list_content h1{
+    font-size: 1.4rem;
+}
+@media screen and (max-width: 780px){
+    .list_content h1{
+        font-size: 1.25rem
+    }
+}
+.list_content h1 a:link{
+    color: #404040;
+}
+.list_content h1 a:hover{
+    color: #707070;
+    text-decoration: none;
+}
+.list_content h1 a:visited{
+    color: #404040;
+}
+
+a:link{
+    text-decoration: none;
+    color: #0088cc;
+}
+a:hover{
+    text-decoration: underline;
+    color: #0088cc;
+}
+a:visited{
+    text-decoration: none;
+    color: #7619c2;
+}
+a:active{
+    text-decoration: underline;
+    color: #333194;
+}
+pre{
+    overflow: auto;
+    padding-left: 20px;
+    border-radius: 10px;
+}
+code{
+    font-family: Consolas, 'DejaVu Sans Mono', monospace;
+    font-size: 90%;
+}
+ul,ol{
+    margin-left: 30px;
+}
+.olc{
+    font-family: Consolas, 'DejaVu Sans Mono', monospace;
+    color: white;
+    background-color: #252525;
+    font-size: 90%;
+    margin: 0px 5px;
+}
+table{
+    width: 100%;
+    table-layout: fixed;
+}
+table, th, td{
+    border-collapse: collapse;
+    border: solid 1px #121212;
+}
+th, td{
+    padding: 5px;
+    text-align: center;
+}
+
+.footer{
+    box-sizing: border-box;
+    background-color: #dbdbdb;
+    min-height: 84px;
+    border-radius: 20px;
+    margin: 10px 0px;
+    padding: 20px;
+}
+@media screen and (max-width: 780px){
+    .footer{
+        box-sizing: border-box;
+        border-radius: 0px;
+    }
+}

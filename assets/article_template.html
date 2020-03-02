@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link href="../style.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ articleTitle }} - {{ title }}</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <h1><a href="../index.html" style="color: #000000; text-decoration: none;">{{ title }}</a></h1>
+            <p>{{ blogDesc }}</p>
+        </div>
+        <div class="article">
+            <div class="atcinside">
+                <h1>{{ articleTitle }}</h1>
+                {{ articleText }}
+                <br>
+                <script>
+                    function tweet() {
+                        var script = document.createElement("script");
+                        script.src = "./tweet.js";
+                        document.body.appendChild(script);
+                    }
+                </script>
+                <span style="cursor: pointer; color: #0088cc;" onclick="tweet();">ツイート</span>
+            </div>
+        </div>
+        <div class="footer">
+            {{ footerText }}
+        </div>
+    </div>
+</body>
+
+</html>
