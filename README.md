@@ -1,22 +1,23 @@
-# ブログジェネレータもどき
+# blogen.py
 
 ## 概要
 
-htmlファイルを切り貼りしてブログっぽいものを生成します。  
-[私のブログ](https://qmainconts.f5.si/blog/blog_index.html)でも使用しています。  
+ブログを生成します。  
+[私のブログ](https://qmainconts.f5.si/blog/index.html)でも使用しています。  
 Twitterに更新通知を投稿できます(開発者登録が必要です)。  
 
 ## 使用方法
 
-1. config.sample.iniを編集しconfig.iniに改名します。
-1. asset内のcssを自由に弄ってデザインを作ります。デフォルトのcssは私のブログと同じです。デザインの参考には```sample_article.html```と```sample_index.html```が使用できます。
-1. article_base.html内に記事を書きます。画像はpicturesフォルダに置きます(```../pictures/hogehoge.jpg```のように相対パスで指定できます)
+1. settings.sample.jsonを編集しsample.jsonに改名します。
+1. ```pip install -r requirements.txt```を実行し、Jinja2とrequests_oauthlibをインストールします。
+1. asset内のcssを自由に弄ってデザインを作ります。デフォルトのcssは私のブログと同じです。デザインの参考になるよう、```sample_article.html```と```sample_index.html```を用意しています。
+1. article_base.html内に記事を書きます。画像はpicturesフォルダに置きます(記事からは```../pictures/hogehoge.jpg```のように相対パスで指定できます)。
 1. main.pyを起動し、記事のタイトルを入力します。
-1. 生成されたblogディレクトリをそのままアップロードします。
+1. 生成されたblogディレクトリを(もしくはその中身を)そのままアップロード/デプロイします。
 
 ## 編集可能なファイル
 
-### config.ini
+### settings.json
 
 プログラムを動作させるために編集が必須です。
 
@@ -30,13 +31,14 @@ classを変更しなければデザインは変更可能です。
 
 ### pictures
 
-ファイルではないですが編集可能です。ただし一度記事に使った画像は消去しないでください。
+ファイルではないですが編集可能です。  
+記事内で使っている画像は消さないようにしてください。
 
-## config.iniについて
+## settings.jsonについて
 
-config.iniは設定ファイルです。正しく入力しないとプログラムがエラーを起こすため気をつけてください。
+settings.jsonは設定ファイルです。正しく入力しないとプログラムがエラーを起こすため気をつけてください。
 
-### [path]
+### path
 
 #### blog_folder
 
@@ -47,12 +49,28 @@ blogディレクトリ生成後: ```E:/websites/mysite.com_local/blog/```
 
 #### blog_url
 
-インターネット上のブログフォルダ置き場を指定します。必ずhttpもしくはhttpsから入力してください。  
+インターネット上のブログがあるURLを指定します。必ずhttpもしくはhttpsから入力してください。  
 入力例: ```https://www.mysite.com/```  
 blogディレクトリ: ```https://www.mysite.com/blog/```  
-ブログトップページ: ```https://www.mysite.com/blog/blog_index.html```
+ブログトップページ: ```https://www.mysite.com/blog/index.html```
 
-### [twitter]
+### blog
+
+#### blog_title
+
+ブログのタイトルを入力してください。
+
+#### blog_description
+
+ブログの説明を入力してください。  
+HTMLを使って書くことができますが、```"```(ダブルクォーテーション)は```\```(バックスラッシュ)でエスケープして```\"```のように書いてください。
+
+#### blog_footer
+
+ブログのフッターを入力してください。  
+HTMLを使って書くことができますが、```"```(ダブルクォーテーション)は```\```(バックスラッシュ)でエスケープして```\"```のように書いてください。
+
+### twitter
 
 Twitter開発者登録をして入手できるトークンなどを入力してください。
 
@@ -72,6 +90,10 @@ Twitter開発者登録をして入手できるトークンなどを入力して�
 
 日付のフォーマットはyyyy.mm.ddです。
 
+### 2020.03.01
+
+非常に大規模な修正(内部実装をJinja2を用いたものに変更)
+
 ### 2019.07.06
 
 大規模な修正
@@ -86,3 +108,7 @@ style.cssのコメントの修正
 初コミット  
 READMEを追加  
 消し忘れを削除
+
+## License
+
+MIT Licenseを採用しています。
