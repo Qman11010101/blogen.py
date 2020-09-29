@@ -35,8 +35,12 @@ os.makedirs("pictures/", exist_ok=True)
 os.chdir(current_dir)  # 戻ってくる
 os.makedirs("pictures/", exist_ok=True)
 
-print("記事のタイトルを入力してください")
-article_title = input(">> ")
+while True:
+    print("記事のタイトルを入力してください")
+    article_title = input(">> ")
+    ans = input(f"記事のタイトルは【{article_title}】で正しいですか？ [Y/n]")
+    if ans.lower() == "y":
+        break
 current_time = datetime.now().strftime("%Y%m%d%H%M%S")
 article_id = str(current_time)
 day_str = str(datetime.now().strftime("%Y-%m-%d"))
